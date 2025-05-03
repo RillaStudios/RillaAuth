@@ -41,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.19.1"
+  easy_sidemenu:
+    dependency: "direct main"
+    description:
+      name: easy_sidemenu
+      sha256: "591cabac129822c0c89a7e16607a9a45ffec58f21fbac1228db93abbf7010eff"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.1"
   fake_async:
     dependency: transitive
     description:
@@ -192,6 +200,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  responsiveplus:
+    dependency: "direct main"
+    description:
+      name: responsiveplus
+      sha256: ee8366f2396ed90d0c8fa8633370dcb2c589d405696f50a2ea7269397c7d3cb5
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.5"
   shared_preferences:
     dependency: transitive
     description:

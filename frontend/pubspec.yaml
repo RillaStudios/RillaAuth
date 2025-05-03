@@ -7,8 +7,10 @@ environment:
   sdk: ^3.7.2
 
 dependencies:
+  easy_sidemenu: ^0.6.1
   flutter:
     sdk: flutter
+  responsiveplus: ^1.0.5
   themesplus: ^1.0.1
 
 dev_dependencies:

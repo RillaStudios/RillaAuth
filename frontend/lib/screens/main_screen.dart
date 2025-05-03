@@ -6,25 +6,22 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppTheme.colors!.surface,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Current Theme: ${ThemesUtil.currentTheme!.value.themeName}'),
-            const SizedBox(height: 20),
-            FilledButton(
-              onPressed: () {
-                ThemesUtil.switchTheme();
-                debugPrint(
-                  'Switched Theme to ${ThemesUtil.currentTheme!.value.themeName}',
-                );
-              },
-              child: const Text('Switch Theme'),
-            ),
-          ],
-        ),
+    return Padding(
+      padding: EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text('Current Theme: ${ThemesUtil.currentTheme!.value.themeName}'),
+          const SizedBox(height: 20),
+          FilledButton(
+            onPressed: () {
+              ThemesUtil.switchTheme();
+              debugPrint('Switched Theme to ${ThemesUtil.currentTheme!.value.themeName}');
+            },
+            child: const Text('Switch Theme'),
+          ),
+        ],
       ),
     );
   }

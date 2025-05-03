@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsiveplus/responsive.dart';
 import 'package:rillaauth_frontend/app/app.dart';
 import 'package:rillaauth_frontend/config/themes/dark_theme.dart';
 import 'package:rillaauth_frontend/config/themes/light_theme.dart';
@@ -7,7 +8,9 @@ import 'package:themesplus/themesplus.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  ThemesUtil.init(themes: [lightTheme, darkTheme]);
+  ResponsiveUtil.init(enableOrientationChange: false);
+
+  await ThemesUtil.init(themes: [lightTheme, darkTheme]);
 
   runApp(const AuthApp());
 }
