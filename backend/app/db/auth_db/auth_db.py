@@ -1,7 +1,7 @@
 from typing import Generator, Annotated
 from fastapi import Depends
 from sqlmodel import create_engine, Session, SQLModel
-from config.config import settings
+from app.config import settings
 
 engine = create_engine(settings.DB_URL, echo=True)
 
