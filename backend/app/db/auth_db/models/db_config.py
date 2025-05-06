@@ -1,3 +1,5 @@
+from enum import Enum
+
 from sqlmodel import SQLModel
 
 class DbConfig(SQLModel, table=True):

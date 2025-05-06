@@ -3,9 +3,9 @@ from typing import Annotated
 from fastapi import Depends, HTTPException, APIRouter
 from fastapi.security import OAuth2PasswordRequestForm
 from starlette import status
-from config.config import settings
-from db.db import SessionDep
-from db.models.token import Token
+from app.config import settings
+from app.db.auth_db.auth_db import AuthDbSession
+from app.db.auth_db.models.token import Token
 from service.user.user_service import authenticate_user
 from service.token.token_service import create_access_token
 
@@ -14,7 +14,7 @@ token_router = APIRouter()
 @token_router.post("/token")  # Note: Should be POST, not GET for login
 async def login_for_access_token(
     form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
-    session: SessionDep
+    session: AuthDbSession
 ) -> Token:
     user = authenticate_user(session, form_data.username, form_data.password)
     if not user:

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:themesplus/themesplus.dart';
 
-AppTheme lightTheme = AppTheme(
+AppTheme defaultTheme = AppTheme(
   id: 'light',
   icon: const Icon(Icons.light_mode),
   themeName: 'Light',
@@ -10,26 +10,25 @@ AppTheme lightTheme = AppTheme(
       brightness: Brightness.light,
 
       // Brand colors (from logo)
-      primary: Color(0xFFF15A24), // Vibrant orange
+      primary: Color(0xFF1E2A38), // Vibrant orange
       onPrimary: Colors.white,
       primaryContainer: Color(0xFFFFE5D6),
       onPrimaryContainer: Color(0xFF3A1A00),
 
-      secondary: Color(0xFFFFD700), // Strong yellow
+      secondary: Color(0xFFD9A760), // Soft amber that complements blue-grey
       onSecondary: Colors.black,
-      secondaryContainer: Color(0xFFFFFFE0),
-      onSecondaryContainer: Color(0xFF3A2F00),
+      secondaryContainer: Color(0xFFF7E8D0), // Lighter amber background
+      onSecondaryContainer: Color(0xFF3A2800), // Dark amber for contrast
 
-      tertiary: Color(0xFFED1C24), // Logo red
+      tertiary: Color(0xFF9986A5), // Muted lavender that complements blue-grey and amber
       onTertiary: Colors.white,
-      tertiaryContainer: Color(0xFFFFD6D6),
-      onTertiaryContainer: Color(0xFF3A0000),
-
+      tertiaryContainer: Color(0xFFE9E0F0), // Light lavender background
+      onTertiaryContainer: Color(0xFF2D1F35), // Dark purple for contrast
       // Fixed colors (Material You support)
-      primaryFixed: Color(0xFFFFA366),
-      primaryFixedDim: Color(0xFFE65C00),
+      primaryFixed: Color(0xFF9FBAD1), // Lighter blue-gray
+      primaryFixedDim: Color(0xFF6A8DA3), // Darker blue-gray
       onPrimaryFixed: Colors.black,
-      onPrimaryFixedVariant: Color(0xFF692100),
+      onPrimaryFixedVariant: Color(0xFF2D4655), // Deep blue-gray
 
       secondaryFixed: Color(0xFFFFF176),
       secondaryFixedDim: Color(0xFFE6C200),

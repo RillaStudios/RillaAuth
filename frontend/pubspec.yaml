@@ -1,17 +1,21 @@
 name: rillaauth_frontend
 description: "Frontend application for RillaAuth service."
-publish_to: 'none'
+publish_to: "none"
 version: 0.0.1
 
 environment:
   sdk: ^3.7.2
 
 dependencies:
-  easy_sidemenu: ^0.6.1
+  easy_sidemenu:
+    git:
+      url: https://github.com/RillaStudios/easy_sidemenu
+  ext_utils: ^1.0.1
   flutter:
     sdk: flutter
+  http: ^1.3.0
   responsiveplus: ^1.0.5
-  themesplus: ^1.0.1
+  themesplus: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -20,3 +24,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/

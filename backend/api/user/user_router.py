@@ -1,6 +1,6 @@
 from typing import Annotated
 from fastapi import Depends, APIRouter
-from db.models.user import User
+from app.db.auth_db.models.user import User
 from service.user.user_service import get_current_user
 
 user_router = APIRouter()

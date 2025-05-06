@@ -3,10 +3,10 @@ import jwt
 from fastapi import Depends
 from jwt import InvalidTokenError
 from sqlmodel import Session, select
-from config.config import settings
-from db.db import SessionDep
-from db.models.token import TokenData
-from db.models.user import User
+from app.config import settings
+from app.db.auth_db.auth_db import AuthDbSession
+from app.db.auth_db.models.token import TokenData
+from app.db.auth_db.models.user import User
 from service.auth.password_crypt import verify_password
 from service.token.token_exceptions import credentials_exception, malformed_exception
 from service.user.user_exceptions import disabled_user_exception
@@ -25,7 +25,7 @@ def authenticate_user(db: Session, username: str, password: str) -> User | bool:
     return user
 
 async def get_current_user(token: Annotated[str, Depends(settings.AUTH_SCHEME)],
-                           db: SessionDep) -> User:
+                           db: AuthDbSession) -> User:
     """
     Get the current user from the token.
 

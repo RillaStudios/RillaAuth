@@ -13,21 +13,25 @@ class RillaSideMenu extends StatelessWidget {
     return SideMenu(
       controller: sideMenuController,
       showToggle: false,
+      collapseWidth: 1200,
       style: SideMenuStyle(
         // Background color of the side menu
         backgroundColor: Colors.transparent,
 
         // Selected item text and icon style
         selectedTitleTextStyle: TextStyle(color: AppTheme.data.colorScheme.primary, fontWeight: FontWeight.w600),
-        selectedIconColor: AppTheme.data.colorScheme.primary,
+        selectedIconColor: AppTheme.colors!.primary,
 
         // Unselected item text and icon style
-        unselectedIconColor: AppTheme.data.colorScheme.onSurface,
-        unselectedTitleTextStyle: TextStyle(color: AppTheme.data.colorScheme.onSurface, fontWeight: FontWeight.w400),
+        unselectedIconColor: AppTheme.colors!.onSurface,
+        unselectedTitleTextStyle: TextStyle(color: AppTheme.colors!.onSurface, fontWeight: FontWeight.w400),
 
         // Toggle button style
-        arrowOpen: Colors.white,
-        toggleColor: Colors.white,
+        arrowCollapse: AppTheme.colors!.onSurface,
+        arrowOpen: AppTheme.colors!.onSurface,
+        toggleColor: AppTheme.colors!.onSurface,
+
+        unselectedIconColorExpandable: AppTheme.data.colorScheme.onSurface,
 
         // Hover color
         hoverColor: AppTheme.data.colorScheme.onSurface.withValues(alpha: 0.1),
@@ -38,14 +42,19 @@ class RillaSideMenu extends StatelessWidget {
         // Outer padding of the side menu items
         itemOuterPadding: EdgeInsets.all(0),
 
-        // Inner padding of the side menu items
-        itemInnerSpacing: 10,
-
         // Item border radius
         itemBorderRadius: BorderRadius.circular(0),
 
         // Width of the side menu when in compact mode
         compactSideMenuWidth: 65,
+
+        selectedTitleTextStyleExpandable: TextStyle(color: AppTheme.colors!.onSurface),
+
+        unselectedTitleTextStyleExpandable: TextStyle(color: AppTheme.colors!.onSurface),
+
+        selectedIconColorExpandable: AppTheme.colors!.onSurface,
+
+        expandedDividerColor: AppTheme.colors!.onSurface,
 
         // Disable tooltips
         showTooltip: false,

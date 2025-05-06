@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from db.models.user import User
+from app.db.auth_db.models.user import User
 from service.auth.auth_service import register_user
 
 auth_router = APIRouter()

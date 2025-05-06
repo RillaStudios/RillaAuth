@@ -7,20 +7,14 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text('Rilla Auth'),
-      centerTitle: true,
+      title: Image.asset('/images/rilla_auth_white.png', height: 40, fit: BoxFit.contain),
+      centerTitle: false,
       backgroundColor: AppTheme.colors!.primary,
       actionsPadding: EdgeInsets.symmetric(horizontal: 10),
       actions: [
-        IconButton(
-          icon: const Icon(Icons.settings),
-          onPressed: () {
-            // Handle settings action
-          },
-        ),
         const SizedBox(width: 10),
         IconButton(
-          icon: const Icon(Icons.logout),
+          icon: Icon(Icons.logout, color: AppTheme.colors!.onPrimary),
           onPressed: () {
             // Handle logout action
           },

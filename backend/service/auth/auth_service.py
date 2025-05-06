@@ -1,9 +1,8 @@
 from fastapi import HTTPException
 from sqlmodel import select
 from starlette import status
-
-from db.db import get_session
-from db.models.user import User
+from app.db.auth_db.auth_db import get_session
+from app.db.auth_db.models.user import User
 from service.auth.password_crypt import pwd_context
 
 
