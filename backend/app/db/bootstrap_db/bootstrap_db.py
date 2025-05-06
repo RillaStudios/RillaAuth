@@ -75,7 +75,7 @@ class BootstrapDb:
             raise
 
     @classmethod
-    def save_settings(cls, host, port, username, password, db_name):
+    def update_settings(cls, host, port, username, password, db_name):
         """
         Save the database settings to the db_settings table.
         This method deletes any existing records in the table and inserts a new record
@@ -106,7 +106,7 @@ class BootstrapDb:
             conn.commit()
 
     @classmethod
-    def load_db_settings(cls):
+    def load_db_config(cls):
         """
         Load the database settings from the db_settings table.
         This method retrieves the first record from the table and returns it as a dictionary.
